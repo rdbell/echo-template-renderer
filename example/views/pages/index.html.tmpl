@@ -1,0 +1,14 @@
+{{ define "content" }}
+  <h1>{{ appName}}</h1>
+  <p>Here's an injected value: <b>{{ .Data.Message }}</b></p>
+  <h3>Cachebust your assets:</h3>
+  <pre>&lt;script src="/js/my_code.js?cb={{ cacheBuster }}"&gt;</pre>
+  <h3>Use global template functions:</h3>
+  <p>$1 plus $2 equals: <b>{{ dollarFormat (add 1.0 2.0) }}</b></p>
+  <p>Check out more pages:</p>
+  <ul>
+    <li><a href="/auth/login">Login</a></li>
+    <li><a href="/auth/signup">Signup</a></li>
+    <li><a href="/404">404</a></li>
+  </ul>
+{{ end }}

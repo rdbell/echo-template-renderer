@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Title -->
+    <title>
+      {{ if .Title }}
+        {{ appName }} - {{ .Title }}
+      {{ else }}
+        {{ appName }}
+      {{ end }}
+    </title>
+
+    <!-- Meta -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, target-densitydpi=device-dpi">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/global.css?cb={{ cacheBuster }}">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css?cb={{ cacheBuster }}">
+
+  </head>
+
+  <body>
+    {{ template "nav" . }}
+    <div id="content">
+      {{ template "content" . }}
+    </div>
+  </body>
+</html>

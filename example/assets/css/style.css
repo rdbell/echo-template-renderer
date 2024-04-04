@@ -1,0 +1,14 @@
+#content {
+  max-width: 800px;
+}
+
+#nav {
+  display: flex;
+  margin-top: 20px;
+}
+
+.nav-right {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+}
